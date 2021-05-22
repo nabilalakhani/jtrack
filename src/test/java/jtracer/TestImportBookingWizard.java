@@ -31,6 +31,7 @@ public class TestImportBookingWizard {
 		Pattern itemAddedDialogue = new Pattern(TestImportBookingWizard.class.getResource("/ImageData/itemAdded.PNG"));
 		Pattern itemAddedOk = new Pattern(TestImportBookingWizard.class.getResource("/ImageData/itemAddedOk.PNG"));
 		Pattern issue = new Pattern(TestImportBookingWizard.class.getResource("/ImageData/issue.PNG"));
+		Pattern assignableBed = new Pattern(TestImportBookingWizard.class.getResource("/ImageData/assignableBed.PNG"));
 		
 
 		App.open("C:\\jtracker\\jailtracker.rdp");
@@ -250,9 +251,43 @@ public class TestImportBookingWizard {
 		
 		//Click the "next" button
 		MouseEvents.click(robot,1858, 989);
+		
+		
+		//click on assignable bed
+		while(screen.exists(assignableBed)==null) {
+			
+			//scroll down to find assignable bed
+			MouseEvents.click(robot,308, 521);
+			if(screen.exists(assignableBed)!=null) {
+				
+				screen.click(assignableBed);
+				
+			}
+
+			
+		}
+
+		//click on bed info
+		MouseEvents.click(robot,343, 303);
+
+		
+		//click on assign button
+		MouseEvents.click(robot,668, 644);
 
 
-
+		//Click on reason for move
+		MouseEvents.click(robot,391, 601);
+		screen.type("Intake");
+		screen.type(Key.ENTER);
+		
+		
+		
+		//Click the "next" button
+		MouseEvents.click(robot,1858, 989);
+	
+		//Click the "save" button
+		MouseEvents.click(robot,1301, 989);
+	
 	}
 	
 	
