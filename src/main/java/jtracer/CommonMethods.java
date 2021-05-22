@@ -26,7 +26,7 @@ public class CommonMethods {
 		MouseEvents.click(robot, 349, 189);
 		screen.type("Summer03");
 		Thread.sleep(2000);
-		MouseEvents.click(robot, 328, 325);
+		MouseEvents.click(robot, 310, 282);
 		
 	}
 	
@@ -83,7 +83,7 @@ public class CommonMethods {
 	public static Tesseract  getTessaract() {
 		
 		Tesseract instance = new Tesseract();
-		instance.setDatapath("C:\\Users\\Gamer\\eclipse-workspace\\JTracker\\tess");
+		instance.setDatapath("C:\\New folder\\proj\\jtrack\\tess");
 		instance.setLanguage("eng");
 		instance.setHocr(false);
 		return instance;

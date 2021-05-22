@@ -33,7 +33,7 @@ public class TestImportBookingWizard {
 		Pattern issue = new Pattern(TestImportBookingWizard.class.getResource("/ImageData/issue.PNG"));
 		
 
-		App.open("C:\\Users\\Gamer\\Downloads\\jtrack.rdp");
+		App.open("C:\\jtracker\\jailtracker.rdp");
 		// Pattern connect = new Pattern("G:\\sikuli images\\connect.PNG");
 		Thread.sleep(2000);
 		Robot robot = new Robot();
@@ -51,6 +51,7 @@ public class TestImportBookingWizard {
 			
 		try {
 		CommonMethods.login(robot, screen);
+		CommonMethods.waitUntilDisplayed(screen, loggedIn, false);
 		
 		}catch(Exception e) {
 			
@@ -61,15 +62,15 @@ public class TestImportBookingWizard {
 		}
 		
 		//Click on offender module tab to access import icon
-		MouseEvents.click(robot,86, 37);
+		MouseEvents.click(robot,91, 37);
 
 		
-		String data = CommonMethods.captureAndConvertText("test",new Point(788, 708), new Point(883,719), 100);
+		String data = CommonMethods.captureAndConvertText("test",new Point(1340, 1018), new Point(1435,1030), 100);
 		System.out.println("data found " + data);
 		//Click on the Active Agency drop-down and select Active Agency.
 		if(data != "Lincoln Hills Schoal") {
 			
-			MouseEvents.click(robot,976, 713);
+			MouseEvents.click(robot,1529, 1024);
 			screen.type("Lincoln Hills School");
 			screen.type(Key.ENTER);
 			
@@ -78,14 +79,14 @@ public class TestImportBookingWizard {
 		
 		
 		//Click on the Import icon
-		MouseEvents.click(robot,14, 109);
+		MouseEvents.click(robot,47, 107);
 
 
 		//maximize search window
-		MouseEvents.click(robot,1137, 12);
+		MouseEvents.click(robot,1414, 154);
 		
 		//click on search
-		MouseEvents.click(robot,1165, 148);
+		MouseEvents.click(robot,1642, 148);
 		
 		if(screen.exists(issue) != null) {
 			
@@ -93,11 +94,16 @@ public class TestImportBookingWizard {
 			
 		}
 		
+		MouseEvents.click(robot,204, 798);
+
+		
 		//click new booking from selected import
-		MouseEvents.click(robot,1012, 705);
+		MouseEvents.click(robot,1405, 1014);
 		
 		//click on confirm agency ok
-		MouseEvents.click(robot,635, 386);
+		MouseEvents.click(robot,915, 538);
+		
+		
 		
 		//Click on the drop-down arrow on the Wears Glasses and select Yes .
 		MouseEvents.click(robot,155, 420);
@@ -105,12 +111,12 @@ public class TestImportBookingWizard {
 		screen.type(Key.ENTER);
 		
 		//Click the "next" button
-		MouseEvents.click(robot,1308, 678);
+		MouseEvents.click(robot,1858, 989);
 		
 		
 		
 		//Enter mandatory data for Legal Status, Status Type, and Start Date, and click the Save Button.
-		MouseEvents.click(robot,259, 231);
+		MouseEvents.click(robot,255, 231);
 		screen.type("Type 1");
 		screen.type(Key.ENTER);
 		
@@ -132,59 +138,55 @@ public class TestImportBookingWizard {
 	
 		
 		//Click the "next" button
-		MouseEvents.click(robot,1308, 678);
+		MouseEvents.click(robot,1858, 989);
 		
 	
 		
 		//Enter mandatory data for the Search Reason, Search Type, and Comments
 		//search reason : Intake
-		MouseEvents.click(robot,789, 346);
+		MouseEvents.click(robot,1343, 341);
 		screen.type("Intake");
 		screen.type(Key.ENTER);
 		
 		
 		//search type : Strip Search
-		MouseEvents.click(robot,789, 388);
+		MouseEvents.click(robot,1341, 385);
 		screen.type("Strip Search");
 		screen.type(Key.ENTER);
 
 		
-		//search type : Strip Search
-		MouseEvents.click(robot,901, 308);
+		//search comments :  comments
+		MouseEvents.click(robot,1450, 308);
 		screen.type("TC 01 - JTracker - Import/Booking WIZARD");
 		screen.type(Key.ENTER);
 
 
 		//Click the "next" button
-		MouseEvents.click(robot,1308, 678);
+		MouseEvents.click(robot,1858, 989);
 		
 		
 		
-		//Record personal property (by item category) to be stored for Youth while living at DJC facility.
-		MouseEvents.click(robot,1339, 339);
-		MouseEvents.click(robot,1339, 339);
-		
-		
+		//Record personal property (by item category) to be stored for Youth while living at DJC facility.	
 		screen.click(shoesCheckbox);
 		
 		
 		//description :Red/Black Nike Air Jordans, Size 11
-		MouseEvents.click(robot,317, 322);
+		MouseEvents.click(robot,317, 551);
 		screen.type("Red/Black Nike Air Jordans, Size 11");
 		
 		//Reason Recieved :Youth wanted to keep them like new until he gets released.
-		MouseEvents.click(robot,125, 390);
+		MouseEvents.click(robot,187, 701);
 		screen.type("Youth wanted to keep them like new until he gets released.");
 
 		
 		//Storage Location :LHS/CLS Storeroom
-		MouseEvents.click(robot,653, 391);
+		MouseEvents.click(robot,653, 701);
 		screen.type("LHS/CLS Storeroom");
 		
 		
 		
 		//Click the add button
-		MouseEvents.click(robot,1296, 389);
+		MouseEvents.click(robot,1854, 701);
 		
 		
 		if(screen.exists(itemAddedDialogue) != null) {
@@ -200,11 +202,11 @@ public class TestImportBookingWizard {
 		
 		
 		//Click the "next" button SKIPPING IMAGE SECTION
-		MouseEvents.click(robot,1308, 678);
+		MouseEvents.click(robot,1858, 989);
 		
 		
 		//Click the "next" button
-		MouseEvents.click(robot,1308, 678);
+		MouseEvents.click(robot,1858, 989);
 				
 		
 		//Click the Add Contacts button in the upper left hand corner of the screen.
@@ -217,37 +219,37 @@ public class TestImportBookingWizard {
 		
 		
 		//enter first name
-		MouseEvents.click(robot,394, 170);
+		MouseEvents.click(robot,697, 327);
 		screen.type("Lydia");
 		
 		//enter last name
-		MouseEvents.click(robot,722, 170);
+		MouseEvents.click(robot,991, 332);
 		screen.type("Lancaster");
 		
 		
 		//Add contact details click on guardian dropdown
-		MouseEvents.click(robot,1037, 171);
+		MouseEvents.click(robot,595, 328);
 		screen.type("Mother");
 		screen.type(Key.ENTER);
 		
 		
 		//Add relation details mother
-		MouseEvents.click(robot,1037, 171);
+		MouseEvents.click(robot,1311, 328);
 		screen.type("Mother");
 		screen.type(Key.ENTER);
 		
 		//Add emergency contact as yes
-		MouseEvents.click(robot,320, 212);
+		MouseEvents.click(robot,594, 366);
 		screen.type("Yes");
 		screen.type(Key.ENTER);
 		
 		
 		//click on save to save all data
-		MouseEvents.click(robot,1114, 580);
+		MouseEvents.click(robot,1388, 743);
 		
 		
 		//Click the "next" button
-		MouseEvents.click(robot,1308, 678);
+		MouseEvents.click(robot,1858, 989);
 
 
 

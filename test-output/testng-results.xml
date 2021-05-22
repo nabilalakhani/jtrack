@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-22T10:29:18Z" name="Default suite" finished-at="2021-05-22T10:30:56Z" duration-ms="97846">
+  <suite started-at="2021-05-22T15:14:58Z" name="Default suite" finished-at="2021-05-22T15:16:34Z" duration-ms="95751">
     <groups>
     </groups>
-    <test started-at="2021-05-22T10:29:18Z" name="Default test" finished-at="2021-05-22T10:30:56Z" duration-ms="97846">
+    <test started-at="2021-05-22T15:14:58Z" name="Default test" finished-at="2021-05-22T15:16:34Z" duration-ms="95751">
       <class name="jtracer.TestImportBookingWizard">
-        <test-method signature="LoginToJTracker()[pri:0, instance:jtracer.TestImportBookingWizard@299321e2]" started-at="2021-05-22T10:29:18Z" name="LoginToJTracker" finished-at="2021-05-22T10:30:56Z" duration-ms="97804" status="PASS">
+        <test-method signature="LoginToJTracker()[pri:0, instance:jtracer.TestImportBookingWizard@23fb172e]" started-at="2021-05-22T15:14:58Z" name="LoginToJTracker" finished-at="2021-05-22T15:16:34Z" duration-ms="95709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginToJTracker -->
