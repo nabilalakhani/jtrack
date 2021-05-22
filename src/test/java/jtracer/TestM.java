@@ -83,7 +83,7 @@ public class TestM {
 			
 		}
 		
-		CommonMethods.waitUntilDisplayed(s, importBtn);
+		CommonMethods.waitUntilDisplayed(s, importBtn,true);
 
 
 	

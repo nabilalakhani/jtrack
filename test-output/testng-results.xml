@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-16T12:06:57Z" name="Default suite" finished-at="2021-05-16T12:07:19Z" duration-ms="21751">
+  <suite started-at="2021-05-22T10:29:18Z" name="Default suite" finished-at="2021-05-22T10:30:56Z" duration-ms="97846">
     <groups>
     </groups>
-    <test started-at="2021-05-16T12:06:57Z" name="Default test" finished-at="2021-05-16T12:07:19Z" duration-ms="21751">
-      <class name="jtracer.TestRobot">
-        <test-method signature="setUp()[pri:0, instance:jtracer.TestRobot@24111ef1]" started-at="2021-05-16T12:06:57Z" name="setUp" finished-at="2021-05-16T12:07:19Z" duration-ms="21685" status="PASS">
+    <test started-at="2021-05-22T10:29:18Z" name="Default test" finished-at="2021-05-22T10:30:56Z" duration-ms="97846">
+      <class name="jtracer.TestImportBookingWizard">
+        <test-method signature="LoginToJTracker()[pri:0, instance:jtracer.TestImportBookingWizard@299321e2]" started-at="2021-05-22T10:29:18Z" name="LoginToJTracker" finished-at="2021-05-22T10:30:56Z" duration-ms="97804" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-      </class> <!-- jtracer.TestRobot -->
+        </test-method> <!-- LoginToJTracker -->
+      </class> <!-- jtracer.TestImportBookingWizard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
