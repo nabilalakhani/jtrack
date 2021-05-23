@@ -137,11 +137,11 @@ public class TestImportBookingWizard {
 		MouseEvents.click(robot, 1858, 989);
 
 		// check if legal status page is displayed
-		if (screen.exists(legalStatusLbl) == null) {
+		if (screen.exists(legalStatusLbl) != null) {
 
 			Assert.fail();
 			logger.log(LogStatus.FAIL, "Test Case (failed as Legal status page was not loaded");
-
+			System.out.println();
 
 		}
 
@@ -312,8 +312,10 @@ public class TestImportBookingWizard {
 
 	
 	@AfterMethod
-	public void getResult(ITestResult result){
+	public void getResult(ITestResult result) throws IOException{
 		if(result.getStatus() == ITestResult.FAILURE){
+	    	Runtime.getRuntime().exec("taskkill /F /IM " + "mstsc.exe");
+
 			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
 			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
 		}else if(result.getStatus() == ITestResult.SKIP){
