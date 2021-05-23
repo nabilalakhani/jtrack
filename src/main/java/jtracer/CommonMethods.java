@@ -40,11 +40,13 @@ public class CommonMethods {
 				
 				s.hover(element);
 				s.click(element);
+				break;
+				
 				
 			}else if(s.exists(element) != null && flag == false ){
 				
 				s.hover(element);
-				
+				break;
 				
 			}else
 			{
@@ -83,7 +85,7 @@ public class CommonMethods {
 	public static Tesseract  getTessaract() {
 		
 		Tesseract instance = new Tesseract();
-		instance.setDatapath("C:\\New folder\\proj\\jtrack\\tess");
+		instance.setDatapath("C:\\Users\\Gamer\\Downloads\\jtrack-master\\jtrack-master\\tess");
 		instance.setLanguage("eng");
 		instance.setHocr(false);
 		return instance;
